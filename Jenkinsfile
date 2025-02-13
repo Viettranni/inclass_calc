@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/SaedAbukar/Jenkinstest.git'
+                git branch: 'main', url: 'https://github.com/Viettranni/inclass_calc.git'
             }
         }
         stage('Build') {
@@ -28,7 +28,7 @@ pipeline {
         }
         stage('Publish Test Results') {
             steps {
-                junit '*/target/surefire-reports/.xml'
+                junit '*/target/surefire-reports/*.xml'
             }
         }
         stage('Publish Coverage Report') {
